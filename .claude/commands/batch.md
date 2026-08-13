@@ -21,9 +21,10 @@ Read `batch.config.json`. Pull out:
 - `generation.model`, `generation.aspectRatio`, `generation.resolution`, `generation.brandStyle`
 - `repo`
 
-If `repo` is still a placeholder (empty, or looks like `<...>` / contains `TODO`), **stop and tell
-the user**: `scripts/promote.mjs` will refuse to promote without a real `owner/repo` value in
-`batch.config.json`, so fix that first. Don't generate anything until it's fixed.
+`scripts/promote.mjs` rejects `repo` when it's empty or still wrapped in angle brackets (e.g. the
+shipped default `<owner>/<repo-name>`). If `repo` looks like that, **stop and tell the user**: set
+`repo` in `batch.config.json` to your real `owner/repo` GitHub slug before promoting — the script
+will refuse to run without it. Don't generate anything until it's fixed.
 
 Confirm the Higgsfield CLI is ready: `higgsfield` should be on `$PATH` and authenticated. If
 `higgsfield account status` fails with "Session expired" / "Not authenticated", tell the user to
