@@ -56,7 +56,7 @@ function readConfig(cwd) {
   return config;
 }
 
-function readDraft(cwd, id, stagingDir) {
+function readDraft(id, stagingDir) {
   if (!fs.existsSync(stagingDir)) {
     throw new Error(`Staging directory not found: staging/${id}. Nothing to promote.`);
   }
@@ -73,7 +73,7 @@ function readDraft(cwd, id, stagingDir) {
   return draft;
 }
 
-function collectStagedImages(cwd, id, stagingDir) {
+function collectStagedImages(id, stagingDir) {
   const files = fs.readdirSync(stagingDir).filter((name) => {
     const ext = path.extname(name).toLowerCase();
     return IMAGE_EXTENSIONS.has(ext);
@@ -131,8 +131,8 @@ export async function promote(id, { cwd = process.cwd(), git = realGit } = {}) {
   const config = readConfig(cwd);
 
   const stagingDir = path.join(cwd, 'staging', id);
-  const draft = readDraft(cwd, id, stagingDir);
-  const stagedImages = collectStagedImages(cwd, id, stagingDir);
+  const draft = readDraft(id, stagingDir);
+  const stagedImages = collectStagedImages(id, stagingDir);
 
   const queuePath = path.join(cwd, 'queue.json');
   const queue = loadQueue(queuePath);
@@ -140,14 +140,22 @@ export async function promote(id, { cwd = process.cwd(), git = realGit } = {}) {
     throw new Error(`queue.json already has an entry with id "${id}". Refusing to add a duplicate.`);
   }
 
+  // Capture state needed to roll back the on-disk mutations below if
+  // `git.add`/`git.commit` fails, so the operation is all-or-nothing.
   const slidesDir = path.join(cwd, 'slides', id);
+  const slidesDirPreexisted = fs.existsSync(slidesDir);
+  const queuePathPreexisted = fs.existsSync(queuePath);
+  const priorQueueBytes = queuePathPreexisted ? fs.readFileSync(queuePath, 'utf8') : null;
+
   fs.mkdirSync(slidesDir, { recursive: true });
 
   const images = [];
+  const copiedDestNames = [];
   stagedImages.forEach((filename, index) => {
     const ext = path.extname(filename).toLowerCase();
     const destName = `${index + 1}${ext}`;
     fs.copyFileSync(path.join(stagingDir, filename), path.join(slidesDir, destName));
+    copiedDestNames.push(destName);
     images.push(
       `https://raw.githubusercontent.com/${config.repo}/main/slides/${id}/${destName}`
     );
@@ -166,8 +174,27 @@ export async function promote(id, { cwd = process.cwd(), git = realGit } = {}) {
   queue.push(entry);
   writeQueue(queuePath, queue);
 
-  await git.add({ cwd, paths: [path.join('slides', id), 'queue.json'] });
-  await git.commit({ cwd, message: `Add ${id} to queue` });
+  try {
+    await git.add({ cwd, paths: [path.join('slides', id), 'queue.json'] });
+    await git.commit({ cwd, message: `Add ${id} to queue` });
+  } catch (err) {
+    // Roll back the on-disk mutations so a retry doesn't trip the duplicate-id
+    // guard against a never-committed entry, and post-next.mjs never sees an
+    // entry whose images were never pushed. staging/<id> is left intact.
+    if (slidesDirPreexisted) {
+      for (const destName of copiedDestNames) {
+        fs.rmSync(path.join(slidesDir, destName), { force: true });
+      }
+    } else {
+      fs.rmSync(slidesDir, { recursive: true, force: true });
+    }
+    if (queuePathPreexisted) {
+      fs.writeFileSync(queuePath, priorQueueBytes, 'utf8');
+    } else {
+      fs.rmSync(queuePath, { force: true });
+    }
+    throw err;
+  }
 
   let pushed = false;
   try {
@@ -176,10 +203,10 @@ export async function promote(id, { cwd = process.cwd(), git = realGit } = {}) {
       await git.push({ cwd });
       pushed = true;
     } else {
-      console.log(`Skipping push for ${id}: no upstream configured yet.`);
+      console.warn(`Skipping push for ${id}: no upstream configured yet.`);
     }
   } catch (err) {
-    console.log(`Warning: git push failed for ${id}: ${err.message}`);
+    console.warn(`Warning: skipping push for ${id}: ${err.message}`);
   }
 
   fs.rmSync(stagingDir, { recursive: true, force: true });

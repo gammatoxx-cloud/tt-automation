@@ -270,6 +270,127 @@ test('push is skipped (no throw) when no upstream exists', async () => {
   assert.ok(!git.calls.some((c) => c.op === 'push'));
 });
 
+test('rollback: git.commit throwing rolls back slides/<id> and queue.json, leaves staging intact (fresh queue.json)', async () => {
+  const cwd = makeTempRepo();
+  writeConfig(cwd);
+  writeStaging(cwd, 'slideshow-commitfail', { images: ['1.png', '2.png'] });
+  const git = {
+    calls: [],
+    add: async (args) => {
+      git.calls.push({ op: 'add', args });
+    },
+    commit: async () => {
+      throw new Error('simulated commit failure (no git identity)');
+    },
+    hasUpstream: async () => true,
+    push: async () => {
+      git.calls.push({ op: 'push' });
+    },
+  };
+
+  await assert.rejects(
+    () => promote('slideshow-commitfail', { cwd, git }),
+    /simulated commit failure/
+  );
+
+  // slides/<id> must not exist (queue.json never existed before this call, and neither did slidesDir)
+  assert.ok(!fs.existsSync(path.join(cwd, 'slides', 'slideshow-commitfail')));
+
+  // queue.json must not exist (it did not exist before the call)
+  assert.ok(!fs.existsSync(path.join(cwd, 'queue.json')));
+
+  // staging dir must still be intact
+  assert.ok(fs.existsSync(path.join(cwd, 'staging', 'slideshow-commitfail', 'draft.json')));
+  assert.ok(fs.existsSync(path.join(cwd, 'staging', 'slideshow-commitfail', '1.png')));
+  assert.ok(fs.existsSync(path.join(cwd, 'staging', 'slideshow-commitfail', '2.png')));
+
+  // push must never have been attempted
+  assert.ok(!git.calls.some((c) => c.op === 'push'));
+});
+
+test('rollback: git.add throwing restores prior queue.json bytes exactly and removes slides/<id>', async () => {
+  const cwd = makeTempRepo();
+  writeConfig(cwd);
+  writeStaging(cwd, 'slideshow-addfail', { images: ['1.png', '2.png'] });
+  const priorQueue = [
+    {
+      id: 'slideshow-old',
+      status: 'posted',
+      topic: 't',
+      title: 'x',
+      caption: 'c',
+      images: ['https://example.com/1.png'],
+      created_at: '2026-01-01',
+      posted_at: '2026-01-02T00:00:00.000Z',
+    },
+  ];
+  const priorBytes = JSON.stringify(priorQueue, null, 2) + '\n';
+  fs.writeFileSync(path.join(cwd, 'queue.json'), priorBytes, 'utf8');
+
+  const git = {
+    calls: [],
+    add: async () => {
+      throw new Error('simulated add failure (lock contention)');
+    },
+    commit: async () => {
+      git.calls.push({ op: 'commit' });
+    },
+    hasUpstream: async () => true,
+    push: async () => {
+      git.calls.push({ op: 'push' });
+    },
+  };
+
+  await assert.rejects(
+    () => promote('slideshow-addfail', { cwd, git }),
+    /simulated add failure/
+  );
+
+  assert.ok(!fs.existsSync(path.join(cwd, 'slides', 'slideshow-addfail')));
+
+  const rawAfter = fs.readFileSync(path.join(cwd, 'queue.json'), 'utf8');
+  assert.equal(rawAfter, priorBytes);
+
+  assert.ok(fs.existsSync(path.join(cwd, 'staging', 'slideshow-addfail', 'draft.json')));
+  assert.ok(!git.calls.some((c) => c.op === 'commit'));
+  assert.ok(!git.calls.some((c) => c.op === 'push'));
+});
+
+test('rollback: pre-existing slides/<id> dir is preserved, only the newly-added files are removed', async () => {
+  const cwd = makeTempRepo();
+  writeConfig(cwd);
+  writeStaging(cwd, 'slideshow-predir', { images: ['1.png', '2.png'] });
+
+  // Simulate a pre-existing slides/<id> directory with an unrelated leftover file.
+  const slidesDir = path.join(cwd, 'slides', 'slideshow-predir');
+  fs.mkdirSync(slidesDir, { recursive: true });
+  fs.writeFileSync(path.join(slidesDir, 'leftover.txt'), 'do not delete me', 'utf8');
+
+  const git = {
+    calls: [],
+    add: async () => {
+      git.calls.push({ op: 'add' });
+    },
+    commit: async () => {
+      throw new Error('simulated commit failure');
+    },
+    hasUpstream: async () => true,
+    push: async () => {
+      git.calls.push({ op: 'push' });
+    },
+  };
+
+  await assert.rejects(() => promote('slideshow-predir', { cwd, git }), /simulated commit failure/);
+
+  // The pre-existing directory and its unrelated file must survive.
+  assert.ok(fs.existsSync(path.join(slidesDir, 'leftover.txt')));
+  // The newly-copied images must be gone.
+  assert.ok(!fs.existsSync(path.join(slidesDir, '1.png')));
+  assert.ok(!fs.existsSync(path.join(slidesDir, '2.png')));
+
+  assert.ok(fs.existsSync(path.join(cwd, 'staging', 'slideshow-predir')));
+});
+
 test('appends to existing queue.json preserving prior entries and order', async () => {
   const cwd = makeTempRepo();
   writeConfig(cwd);
