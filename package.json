@@ -1,0 +1,12 @@
+{
+  "name": "tt-automation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Automated TikTok slideshow pipeline — daily robot drafts approved slideshows via Zernio; batch prep generates slides via the Higgsfield CLI.",
+  "scripts": {
+    "post": "node scripts/post-next.mjs",
+    "test": "node --test scripts/*.test.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

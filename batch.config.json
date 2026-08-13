@@ -1,0 +1,11 @@
+{
+  "REVIEW_MODE": "full",
+  "IMAGE_HOST": "github-raw",
+  "generation": {
+    "aspectRatio": "4:5",
+    "resolution": "2k",
+    "model": "nano_banana_2",
+    "brandStyle": "TODO: fill in Skills UI brand-voice and visual style notes"
+  },
+  "repo": "gammatoxx-cloud/TODO-repo-name"
+}
