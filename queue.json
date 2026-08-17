@@ -66,5 +66,22 @@
     ],
     "created_at": "2026-08-17",
     "posted_at": null
+  },
+  {
+    "id": "slideshow-006",
+    "status": "pending",
+    "topic": "Pricing Page UI That Makes People Pick the Right Plan — highlighting the plan you want chosen, annual toggle defaults, anchoring, cutting plan clutter",
+    "title": "Your pricing page is quietly leaving money on the table",
+    "caption": "Most pricing pages make people work too hard, and they leave without buying.\n\nMake it easier. Highlight the plan you actually want people to pick — badge it, make it bigger, give it the accent color. Default the billing toggle to annual and show the savings right there. Put a pricey plan first so the one you want looks reasonable next to it. And cut the clutter — three plans max, not six columns of tiny checkmarks nobody reads.\n\nGuide the choice instead of leaving people to figure it out. They'll thank you by actually converting.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #uxdesign #webdesign #designtips #pricing #saas #frontend #productdesign #ui #indiehackers",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-006/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-006/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-006/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-006/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-006/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-006/6.png"
+    ],
+    "created_at": "2026-08-17",
+    "posted_at": null
   }
 ]
