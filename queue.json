@@ -15,5 +15,22 @@
     ],
     "created_at": "2026-08-17",
     "posted_at": "2026-08-17T00:44:12.999Z"
+  },
+  {
+    "id": "slideshow-003",
+    "status": "pending",
+    "topic": "The Spacing Rules That Make UI Look Designed — the 8pt grid, generous section padding, grouping by proximity, why cramped UI reads as amateur",
+    "title": "Same layout, way more space — that's the whole trick",
+    "caption": "Most UI that feels a little 'off' has the same problem: no space.\n\nGood news is you don't have to redesign anything. Usually the fix is just room. Put everything on an 8pt grid so your gaps stop looking random. Give your sections way more padding than feels necessary. Keep related stuff close together, and push the unrelated stuff apart.\n\nSame layout, more breathing room, and suddenly it looks like someone who knew what they were doing built it.\n\nWhich one are you trying first?\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #uxdesign #webdesign #designtips #spacing #layout #frontend #productdesign #ui #indiehackers",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-003/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-003/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-003/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-003/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-003/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-003/6.png"
+    ],
+    "created_at": "2026-08-17",
+    "posted_at": null
   }
 ]
