@@ -100,5 +100,22 @@
     ],
     "created_at": "2026-08-17",
     "posted_at": null
+  },
+  {
+    "id": "slideshow-008",
+    "status": "pending",
+    "topic": "UI That Breaks on Mobile (And How to Fix It) — touch target sizes, sticky mobile CTAs, text that's too small, tables that don't reflow",
+    "title": "Looks great on your laptop. Falls apart on a phone.",
+    "caption": "Your site looks great on your big monitor. On a phone? Probably a mess. Here's what usually breaks.\n\nTap targets that are too small — make every button at least 44px so people can actually hit them. Your main CTA scrolling away — pin it to the bottom so it's always a thumb-tap away. Text that's too tiny — 16px is the floor for body copy, anything less and people are pinching to zoom. And wide tables that overflow — reflow them into stacked cards so each row reads top to bottom.\n\nDesign for the thumb first and mobile stops being an afterthought.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #uxdesign #webdesign #designtips #mobile #responsive #frontend #productdesign #ui #indiehackers",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-008/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-008/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-008/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-008/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-008/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-008/6.png"
+    ],
+    "created_at": "2026-08-17",
+    "posted_at": null
   }
 ]
