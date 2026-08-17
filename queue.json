@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "slideshow-002",
+    "status": "pending",
+    "topic": "How to Pick Colors That Don't Look AI-Generated — accent discipline, why indigo/blue defaults scream slop, picking one accent and committing, warm vs cold neutrals",
+    "title": "Why every AI app is the same shade of blue",
+    "caption": "Ever notice how every new AI app ships the same indigo? That's not a coincidence — it's the default.\n\nBootstrap blue, Tailwind indigo, #6366F1 everywhere. Reaching for blue is the fastest way to look generic.\n\nThe fix:\n01. Pick ONE accent and commit — use it for actions, not decoration\n02. Kill the default indigo/blue\n03. Nudge your neutrals warm or cool (pure grey looks cheap)\n04. Check your palette in greyscale first\n\nColor is a choice. Make one.\n\nFollow for UI tips that make your app look expensive.\n\n#uidesign #uxdesign #webdesign #designtips #colortheory #color #frontend #productdesign #ui #indiehackers",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-002/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-002/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-002/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-002/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-002/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-002/6.png"
+    ],
+    "created_at": "2026-08-17",
+    "posted_at": null
+  }
+]
