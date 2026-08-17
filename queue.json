@@ -49,5 +49,22 @@
     ],
     "created_at": "2026-08-17",
     "posted_at": "2026-08-17T20:29:26.378Z"
+  },
+  {
+    "id": "slideshow-005",
+    "status": "pending",
+    "topic": "How to Design a Hero Section That Actually Hooks — clear value prop over clever copy, one CTA, showing the product not an illustration, the fold line",
+    "title": "You've got 3 seconds before they leave your hero",
+    "caption": "People decide whether to stay in about 3 seconds. Your hero section has to do a lot in that time.\n\nSkip the clever headline and just say what your thing does, plainly. Give people one button, not five — pick the action you want most and make it obvious. Show a real screenshot of the product instead of some generic illustration, so they can see what they're getting. And put all of it above the fold, because you should assume nobody scrolls.\n\nClear message, one action, real product, above the fold. That's a hero that actually hooks.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #uxdesign #webdesign #designtips #landingpage #herosection #frontend #productdesign #ui #indiehackers",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-005/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-005/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-005/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-005/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-005/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-005/6.png"
+    ],
+    "created_at": "2026-08-17",
+    "posted_at": null
   }
 ]
