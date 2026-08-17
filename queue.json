@@ -83,5 +83,22 @@
     ],
     "created_at": "2026-08-17",
     "posted_at": null
+  },
+  {
+    "id": "slideshow-007",
+    "status": "pending",
+    "topic": "The Screens Everyone Forgets to Design — empty states, loading states, error states, the zero-data first-run experience",
+    "title": "The screens everyone forgets to design",
+    "caption": "Everyone designs the happy path. Almost nobody designs the empty screen, the loading screen, or the error screen — and those are the ones people actually hit first.\n\nDesign the empty state: a friendly line and one clear button beats a blank void. Show a loading state so a slow screen doesn't feel broken — skeletons or a spinner, anything. Write error messages a human would understand, and tell people what to do next. And nail the first-run experience, because the zero-data moment decides if anyone sticks around.\n\nThe boring screens are where good apps pull away from sloppy ones.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #uxdesign #webdesign #designtips #emptystates #ux #frontend #productdesign #ui #indiehackers",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-007/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-007/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-007/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-007/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-007/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-007/6.png"
+    ],
+    "created_at": "2026-08-17",
+    "posted_at": null
   }
 ]
