@@ -4,8 +4,8 @@
   "generation": {
     "aspectRatio": "4:5",
     "resolution": "2k",
-    "model": "nano_banana_2",
-    "brandStyle": "TODO: fill in Skills UI brand-voice and visual style notes"
+    "model": "nano_banana_pro",
+    "brandStyle": "Skills UI design system (full spec: /Users/victorgarcia/Documents/SkillsUI/skills-ui/DESIGN.md). Warm charcoal #1C1A17 background (NEVER black), warm cream text #EBE3CC (NEVER white), muted taupe subtext #8A7D68, single Electric Yellow accent #EEFF3A used sparingly (one CTA/one headline line). Fonts: Space Grotesk (headlines + body) + Space Mono (all labels/technical/numbers, uppercase, letter-spacing). Zero border radius everywhere. Corner-bracket card borders (only the four corners drawn, never full rectangles). Section-header motif: bullet dot + Space Mono uppercase label + 45-degree diagonal hatch bar. Flat: no shadows/gradients; depth via background steps #242018 and #2C2820. Number lists 01/02/03. Blueprint/engineered/technical mood. Voice: confident, direct, design-credible, slightly provocative."
   },
   "repo": "gammatoxx-cloud/tt-automation"
 }
