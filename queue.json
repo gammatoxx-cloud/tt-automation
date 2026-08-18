@@ -52,7 +52,7 @@
   },
   {
     "id": "slideshow-005",
-    "status": "pending",
+    "status": "posted",
     "topic": "How to Design a Hero Section That Actually Hooks — clear value prop over clever copy, one CTA, showing the product not an illustration, the fold line",
     "title": "You've got 3 seconds before they leave your hero",
     "caption": "People decide whether to stay in about 3 seconds. Your hero section has to do a lot in that time.\n\nSkip the clever headline and just say what your thing does, plainly. Give people one button, not five — pick the action you want most and make it obvious. Show a real screenshot of the product instead of some generic illustration, so they can see what they're getting. And put all of it above the fold, because you should assume nobody scrolls.\n\nClear message, one action, real product, above the fold. That's a hero that actually hooks.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #uxdesign #webdesign #designtips #landingpage #herosection #frontend #productdesign #ui #indiehackers",
@@ -65,11 +65,11 @@
       "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-005/6.png"
     ],
     "created_at": "2026-08-17",
-    "posted_at": null
+    "posted_at": "2026-08-18T15:25:08.535Z"
   },
   {
     "id": "slideshow-006",
-    "status": "pending",
+    "status": "posted",
     "topic": "Pricing Page UI That Makes People Pick the Right Plan — highlighting the plan you want chosen, annual toggle defaults, anchoring, cutting plan clutter",
     "title": "Your pricing page is quietly leaving money on the table",
     "caption": "Most pricing pages make people work too hard, and they leave without buying.\n\nMake it easier. Highlight the plan you actually want people to pick — badge it, make it bigger, give it the accent color. Default the billing toggle to annual and show the savings right there. Put a pricey plan first so the one you want looks reasonable next to it. And cut the clutter — three plans max, not six columns of tiny checkmarks nobody reads.\n\nGuide the choice instead of leaving people to figure it out. They'll thank you by actually converting.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #uxdesign #webdesign #designtips #pricing #saas #frontend #productdesign #ui #indiehackers",
@@ -82,7 +82,7 @@
       "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-006/6.png"
     ],
     "created_at": "2026-08-17",
-    "posted_at": null
+    "posted_at": "2026-08-18T15:25:21.378Z"
   },
   {
     "id": "slideshow-007",
