@@ -1,7 +1,10 @@
 name: Daily TikTok Drafts
 on:
   schedule:
-    - cron: '0 15 * * *'   # 15:00 UTC — adjust to your local slot; UTC only, may run 10–30 min late
+    # 15:00 UTC = 11:00am EDT (Eastern daylight). GitHub cron is UTC-only and does NOT adjust for DST,
+    # so when clocks fall back to EST (Nov–Mar) this fires at 10:00am Eastern. To keep it at 11:00am
+    # EST in winter, change to '0 16 * * *'. May run 10–30 min late (GitHub scheduler drift).
+    - cron: '0 15 * * *'
   workflow_dispatch: {}     # manual "Run workflow" button for testing
 permissions:
   contents: write           # lets the job commit the updated queue.json
