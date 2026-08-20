@@ -117,5 +117,22 @@
     ],
     "created_at": "2026-08-17",
     "posted_at": null
+  },
+  {
+    "id": "slideshow-009",
+    "status": "pending",
+    "topic": "Loading states that don't feel slow",
+    "title": "Your app isn't slow, it just feels slow",
+    "caption": "Speed is mostly a feeling. Here's how to make a wait feel like nothing.\n\nSkeletons beat spinners because they show the shape of what's coming. React the second someone taps, even before the data lands. A spinner's fine under a second, but anything longer needs a real progress bar, because the not-knowing is what actually makes waiting feel awful.\n\nSave this for your next build.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #ux #productdesign #webdesign #frontend #designtips",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-009/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-009/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-009/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-009/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-009/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-009/6.png"
+    ],
+    "created_at": "2026-08-20",
+    "posted_at": null
   }
 ]
