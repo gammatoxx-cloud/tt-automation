@@ -81,10 +81,10 @@ copy them — are in **`references/slide-prompts.md`**. Read that file before wr
    d. Generate each slide with the bundled helper (reads model/ar/res from `batch.config.json`,
       downloads the result URL with retries):
       ```bash
-      scripts/../.claude/skills/tiktok-slideshows/scripts/gen-slide.sh /tmp/<id>/N.txt staging/<id>/N.png
+      .claude/skills/tiktok-slideshow-skill/scripts/gen-slide.sh /tmp/<id>/N.txt staging/<id>/N.png
       ```
       (From the repo root, the script is at
-      `.claude/skills/tiktok-slideshows/scripts/gen-slide.sh`. Loop it over the slides, or generate a
+      `.claude/skills/tiktok-slideshow-skill/scripts/gen-slide.sh`. Loop it over the slides, or generate a
       few at a time.)
    e. **View every slide** (Read each PNG) and check the text is spelled right and nothing's garbled.
       Regenerate any bad slide by tweaking its prompt (shorter strings, exact quotes). If a domain or
