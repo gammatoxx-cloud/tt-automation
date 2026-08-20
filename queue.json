@@ -168,5 +168,22 @@
     ],
     "created_at": "2026-08-20",
     "posted_at": null
+  },
+  {
+    "id": "slideshow-012",
+    "status": "pending",
+    "topic": "Tables that are actually readable",
+    "title": "Your data table is fighting the reader",
+    "caption": "A messy table makes people work to read it. A few small moves fix that.\n\nRight-align your numbers so they stack by the digits, left-align your text. Give rows room to breathe. Pin the header and stripe the rows instead of drawing a full grid. And on mobile, stop the pinch-and-zoom mess by stacking each row into its own little card.\n\nLet the data breathe.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #ux #productdesign #dataviz #webdesign #designtips",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-012/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-012/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-012/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-012/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-012/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-012/6.png"
+    ],
+    "created_at": "2026-08-20",
+    "posted_at": null
   }
 ]
