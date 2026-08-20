@@ -202,5 +202,22 @@
     ],
     "created_at": "2026-08-20",
     "posted_at": null
+  },
+  {
+    "id": "slideshow-014",
+    "status": "pending",
+    "topic": "Comparison tables that actually sell",
+    "title": "Your comparison table is boring buyers away",
+    "caption": "A vs-competitor table can close the sale or put people to sleep. Usually it's the second one.\n\nMake your column pop so it's the first thing their eye lands on. Don't hand yourself a check on every row, a table where you win everything reads like a lie. List the rows people actually decide on, not twenty nobody reads. And on mobile, collapse it to one rival at a time behind a toggle.\n\nSell without the hype.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #ux #saas #landingpage #productdesign #designtips",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-014/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-014/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-014/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-014/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-014/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-014/6.png"
+    ],
+    "created_at": "2026-08-20",
+    "posted_at": null
   }
 ]
