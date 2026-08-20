@@ -185,5 +185,22 @@
     ],
     "created_at": "2026-08-20",
     "posted_at": null
+  },
+  {
+    "id": "slideshow-013",
+    "status": "pending",
+    "topic": "The section right after your hero",
+    "title": "You nailed the hero, then you lost them",
+    "caption": "People blow past your hero in about a second. The section right under it is what actually keeps them scrolling.\n\nDon't drop a wall of six feature cards there, nobody reads that before they know why they should care. Borrow some trust instead: a row of logos or one real number. Or show how it works in three plain steps. Either one keeps the momentum going.\n\nEarn the next scroll.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #ux #landingpage #webdesign #productdesign #designtips",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-013/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-013/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-013/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-013/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-013/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-013/6.png"
+    ],
+    "created_at": "2026-08-20",
+    "posted_at": null
   }
 ]
