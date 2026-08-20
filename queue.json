@@ -134,5 +134,22 @@
     ],
     "created_at": "2026-08-20",
     "posted_at": null
+  },
+  {
+    "id": "slideshow-010",
+    "status": "pending",
+    "topic": "Error messages people don't hate",
+    "title": "\"Something went wrong\" is the laziest line in your app",
+    "caption": "A good error message can actually build trust. A lazy one just makes people bounce.\n\nDrop the robot talk and say what happened in plain words. Name the problem AND the next step. Put the message right next to the thing that broke, not in a banner up top. And never phrase it like it's the person's fault.\n\nWrite errors people don't hate.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #ux #uxwriting #productdesign #webdesign #designtips",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-010/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-010/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-010/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-010/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-010/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-010/6.png"
+    ],
+    "created_at": "2026-08-20",
+    "posted_at": null
   }
 ]
