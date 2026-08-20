@@ -120,7 +120,7 @@
   },
   {
     "id": "slideshow-009",
-    "status": "pending",
+    "status": "posted",
     "topic": "Loading states that don't feel slow",
     "title": "Your app isn't slow, it just feels slow",
     "caption": "Speed is mostly a feeling. Here's how to make a wait feel like nothing.\n\nSkeletons beat spinners because they show the shape of what's coming. React the second someone taps, even before the data lands. A spinner's fine under a second, but anything longer needs a real progress bar, because the not-knowing is what actually makes waiting feel awful.\n\nSave this for your next build.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #ux #productdesign #webdesign #frontend #designtips",
@@ -133,11 +133,11 @@
       "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-009/6.png"
     ],
     "created_at": "2026-08-20",
-    "posted_at": null
+    "posted_at": "2026-08-20T15:27:35.066Z"
   },
   {
     "id": "slideshow-010",
-    "status": "pending",
+    "status": "posted",
     "topic": "Error messages people don't hate",
     "title": "\"Something went wrong\" is the laziest line in your app",
     "caption": "A good error message can actually build trust. A lazy one just makes people bounce.\n\nDrop the robot talk and say what happened in plain words. Name the problem AND the next step. Put the message right next to the thing that broke, not in a banner up top. And never phrase it like it's the person's fault.\n\nWrite errors people don't hate.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #ux #uxwriting #productdesign #webdesign #designtips",
@@ -150,7 +150,7 @@
       "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-010/6.png"
     ],
     "created_at": "2026-08-20",
-    "posted_at": null
+    "posted_at": "2026-08-20T15:27:53.085Z"
   },
   {
     "id": "slideshow-011",
