@@ -151,5 +151,22 @@
     ],
     "created_at": "2026-08-20",
     "posted_at": null
+  },
+  {
+    "id": "slideshow-011",
+    "status": "pending",
+    "topic": "Toasts and notifications that don't annoy",
+    "title": "Half your notifications shouldn't exist",
+    "caption": "Most toasts are just noise. If the result already shows on screen, you don't need one.\n\nMatch the weight to the message: a toast for quick confirmations, a banner for stuff that sticks around like an outage, nothing at all for the obvious. Give people 4 to 5 seconds to read it, then get out of the way. And always let them close it.\n\nRespect the attention.\n\nBrowse design skills for any AI builder → skillsui.app\n\n#uidesign #ux #productdesign #webdesign #frontend #designtips",
+    "images": [
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-011/1.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-011/2.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-011/3.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-011/4.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-011/5.png",
+      "https://raw.githubusercontent.com/gammatoxx-cloud/tt-automation/main/slides/slideshow-011/6.png"
+    ],
+    "created_at": "2026-08-20",
+    "posted_at": null
   }
 ]
